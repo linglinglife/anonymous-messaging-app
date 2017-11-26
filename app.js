@@ -5,8 +5,8 @@ function changeText(parameter) {
   newElement.innerHTML = document.getElementById('message').value;
   //document.body.appendChild(newElement);
 
-  var lastMessage = document.getElementById('user_message');
-  lastMessage.parentNode.insertAfter(newElement, lastMessage);
+  var messageList = document.getElementById('user_message');
+  messageList.insertBefore(newElement, messageList.childNodes[0]); 
 
   parameter.preventDefault;
 

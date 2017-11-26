@@ -7,15 +7,18 @@
      <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
-    <h1>Yikkidy Yakkidy</h2>
-      <textarea rows="1" cols="50" name="message" form="usrform">Write a message...</textarea>
-      <input type="submit">
+    <h1 class="mx-sm-3">Yikkidy Yakkidy</h1>
+    <form class="form-inline">
+      <div class="form-group mx-sm-3">
+        <input type="text" class="form-control" id="message" placeholder="Write a message...">
+      </div>
+      <button type="button" class="btn btn-primary" onClick="changeText(this)">Send</button>
     </form>
     <br>
-    <div id="user_message">
+    <div id="user_message"></div>
       <p> Message 1</p>
       <p> Message 2</p>
-    </div>
+
   </body>
 
 </html>

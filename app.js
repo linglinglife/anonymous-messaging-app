@@ -16,3 +16,10 @@ function changeText(parameter) {
     //document.write(parameter);
     //id.innerHTML = "Ooops!";
 }
+
+var message = document.getElementById("message");
+var submitBtn = document.getElementById("submitBtn");
+
+function submitClick() {
+  window.alert("working");
+}

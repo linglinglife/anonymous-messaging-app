@@ -11,6 +11,8 @@ function changeText(parameter) {
 
   parameter.preventDefault;
 
+  submitClick();
+
   //document.body.appendChild(parameter);
 
     //document.write(parameter);
@@ -21,5 +23,8 @@ var message = document.getElementById("message");
 var submitBtn = document.getElementById("submitBtn");
 
 function submitClick() {
-  window.alert("working");
+  console.log("Firebase: " + firebase)
+  var firebaseRef = firebase.database().ref();
+  firebaseRef.child("message").set("value");
+
 }

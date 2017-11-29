@@ -22,20 +22,13 @@ function addNewMessageToPage(newMessage) {
   messageList.insertBefore(newElement, messageList.childNodes[0]);
 }
 
-var message = document.getElementById("message");
-var submitBtn = document.getElementById("submitBtn");
-
 // Push a new message into firebase
 function pushNewMessageToFirebase(messageText) {
-  console.log("Firebase: " + firebase)
-
   let messagesRef = firebase.database().ref("messages");
   messagesRef.push().set(messageText);
-  //var firebaseRef = firebase.database().ref();
-  //firebaseRef.child("message").set(messageText);
-
 }
 
+// add listener for new messages on page load
 window.onload = function() {
   var messagesRef = firebase.database().ref("messages");
   messagesRef.on('child_added', function(data) {

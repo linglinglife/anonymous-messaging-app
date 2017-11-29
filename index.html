@@ -10,14 +10,12 @@
     <h1 class="mx-sm-3">Yikkidy Yakkidy</h1>
     <form class="form-inline">
       <div class="form-group mx-sm-3">
-        <input type="text" class="form-control" id="message" placeholder="Write a message...">
+        <input type="text" class="form-control" id="theNewMessageTheUserPutIntoTheTextField" placeholder="Write a message...">
       </div>
-      <button id="submitBtn" type="button" class="btn btn-primary" onClick="changeText(this)">Send</button>
+      <button id="submitBtn" type="button" class="btn btn-primary" onClick="submitNewMessage(this)">Submit</button>
     </form>
     <br>
     <div class="mx-sm-3" id="user_message">
-      <p> Message 1</p>
-      <p> Message 2</p>
     </div>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script>
